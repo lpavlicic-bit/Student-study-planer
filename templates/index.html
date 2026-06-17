@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block page_title %}Dobrodošli{% endblock %}
+
+{% block content %}
+
+<div class="hero-card">
+    <h2>Organiziraj svoje sesije učenja.</h2>
+
+    <p>
+        Student Study Planer je jednostavan web servis koji studentu omogućuje
+        vođenje evidencije o sesijama učenja. Svaka sesija bilježi kolegij,
+        datum, broj sati i temu učenja.
+    </p>
+
+    <div class="button-row">
+        <a href="/dodaj" class="primary-btn">Dodaj sesiju</a>
+        <a href="/sesije" class="secondary-btn">Pregled sesija</a>
+    </div>
+    
+</div>
+{% endblock %}

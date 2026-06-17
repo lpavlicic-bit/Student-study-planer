@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block page_title %}Statistika{% endblock %}
+
+{% block content %}
+<div class="stats-layout">
+
+    <div class="stat-card">
+        <h2>Ukupno sati učenja</h2>
+        <div class="big-number">{{ ukupno_sati }} h</div>
+    </div>
+
+    <div class="panel chart-panel">
+        <div class="panel-header">
+            <div>
+                <h2>Sati po kolegiju</h2>
+            </div>
+        </div>
+
+        {% if sati_po_kolegiju %}
+            <div class="simple-chart">
+                {% for kolegij, sati in sati_po_kolegiju.items() %}
+                    <div class="chart-row">
+                        <div class="chart-info">
+                            <strong>{{ kolegij }}</strong>
+                            <span>{{ sati }} h</span>
+                        </div>
+
+                        <div class="bar-bg">
+                            <div class="bar-fill" 
+                            style="width: {{ sati * 10 }}%;"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty-text">Nema podataka za prikaz statistike.</p>
+        {% endif %}
+    </div>
+    
+</div>
+{% endblock %}

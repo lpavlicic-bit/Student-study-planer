@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  student-study-planer:
+    build: .
+    container_name: student-study-planer
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./database:/app/database

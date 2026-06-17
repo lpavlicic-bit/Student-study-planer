@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Study Planer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="page-background">
+    <div class="app-wrapper">
+
+        <aside class="sidebar">
+            <div class="logo-box">
+                <div class="logo-circle">FIPU</div>
+            </div>
+
+            <nav class="menu">
+                <a href="/">Početna</a>
+                <a href="/sesije">Sesije</a>
+                <a href="/dodaj">Dodaj</a>
+                <a href="/statistika">Statistika</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="student-icon">🎓</div>
+                <small>Ime Prezime</small>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="label">Student Study Planer</p>
+                    <h1>{% block page_title %}Dashboard{% endblock %}</h1>
+                </div>
+            </header>
+
+            <section>
+                {% block content %}{% endblock %}
+            </section>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>

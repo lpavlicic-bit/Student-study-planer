@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block page_title %}Dodaj sesiju{% endblock %}
+
+{% block content %}
+<div class="form-card">
+
+    <p class="label">Nova sesija</p>
+    <h2>Unesi podatke o učenju</h2>
+
+    <form method="POST" class="custom-form">
+        <div class="form-group">
+            <label>Kolegij</label>
+            <input type="text" name="kolegij" required>
+        </div>
+
+        <div class="form-group">
+            <label>Datum</label>
+            <input type="date" 
+            name="datum" required>
+        </div>
+
+        <div class="form-group">
+            <label>Broj sati</label>
+            <input type="number" step="0.5" 
+            min="0.5" name="sati" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tema</label>
+            <input type="text" name="tema" required>
+        </div>
+
+        <button type="submit" 
+        class="primary-btn full-width">Spremi sesiju</button>
+
+    </form>
+
+</div>
+{% endblock %}

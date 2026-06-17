@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block page_title %}Popis sesija{% endblock %}
+
+{% block content %}
+<div class="panel">
+
+    <div class="panel-header">
+        <div>
+            <h2>Sesije učenja</h2>
+        </div>
+
+        <a href="/dodaj" class="primary-btn">+ Nova sesija</a>
+    </div>
+
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Kolegij</th>
+                    <th>Datum</th>
+                    <th>Sati</th>
+                    <th>Tema</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for sesija in sesije %}
+                <tr>
+                    <td>#{{ sesija.id }}</td>
+                    <td><span class="pill">{{ sesija.kolegij }}</span></td>
+                    <td>{{ sesija.datum }}</td>
+                    <td><strong>{{ sesija.sati }} h</strong></td>
+                    <td>{{ sesija.tema }}</td>
+                    <td>
+                        <a href="/uredi/{{ sesija.id }}" 
+                        class="edit-btn">Uredi</a>
+
+                        <a href="/obrisi/{{ sesija.id }}" 
+                        class="delete-btn">Obriši</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="6" 
+                    class="empty-row">Nema dodanih sesija učenja.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
