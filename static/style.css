@@ -104,17 +104,6 @@ a {
     color: #aaa6bd;
 }
 
-.student-icon {
-    width: 42px;
-    height: 42px;
-    margin: 0 auto 8px;
-    border-radius: 50%;
-    background: white;
-    color: var(--dark);
-    display: grid;
-    place-items: center;
-}
-
 .main-content {
     padding: 38px 45px;
     overflow-y: auto;}

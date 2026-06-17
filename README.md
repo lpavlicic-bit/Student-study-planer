@@ -2,9 +2,9 @@
 
 ## Opis projekta
 
-Student Study Planer je jednostavan web servis koji studentu omogućuje vođenje evidencije o sesijama učenja. Svaka sesija bilježi kolegij, datum, broj sati i temu učenja. Aplikacija može pomoći studentima u organizaciji vremena, praćenju navika te analizi koliko vremena ulažu u pojedine kolegije.
+Student Study Planer je jednostavan web servis koji studentima omogućuje vođenje evidencija o sesijama učenja. Svaka sesija bilježi kolegij, datum, broj sati i temu učenja. Aplikacija može pomoći studentima u organizaciji vremena, praćenju navika te analizi koliko vremena ulažu u svaki kolegij.
 
-Korisnik putem web sučelja može dodati novu sesiju učenja, pregledati sve spremljene sesije, urediti postojeću sesiju ili je obrisati. Na stranici statistike prikazuje se ukupan broj sati učenja i pregled sati po kolegiju. Backend dodatno nudi API rute za dohvat, dodavanje, uređivanje i brisanje podataka.
+Korisnik putem web sučelja može dodati novu sesiju učenja, pregledati sve spremljene sesije, urediti postojeću sesiju ili je obrisati. Na stranici statistike prikazuju se ukupan broj sati učenja i pregled sati po kolegiju. Backend dodatno nudi API rute za dohvat, dodavanje, uređivanje te brisanje podataka.
 
 ## Funkcionalnosti
 
